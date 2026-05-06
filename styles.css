@@ -353,6 +353,64 @@
     margin-bottom: 0;
   }
 
+
+  /* --- Gallery Section --- */
+
+  .w-bg-gallery {
+    background-color: var(--color-5);
+    position: relative;
+  }
+
+  .w-content-gallery {
+    max-width: 1280px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 6rem 2rem;
+    display: flex;
+    flex-direction: column;
+    row-gap: 3rem;
+  }
+
+  .w-heading-gallery {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 2.25em;
+    line-height: 1.25;
+  }
+
+  .w-gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto auto;
+    gap: 0.75rem;
+  }
+
+  .w-gallery-item {
+    overflow: hidden;
+    border-radius: 0.25rem;
+  }
+
+  .w-gallery-item--wide {
+    grid-column: span 2;
+  }
+
+  .w-gallery-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    aspect-ratio: 4 / 3;
+    display: block;
+    transition: transform 0.4s ease;
+  }
+
+  .w-gallery-item--wide .w-gallery-img {
+    aspect-ratio: 16 / 9;
+  }
+
+  .w-gallery-item:hover .w-gallery-img {
+    transform: scale(1.03);
+  }
+
   /* --- Footer --- */
 
   .w-footer {
@@ -422,6 +480,30 @@
     line-height: 1;
     width: 30svw;
     font-size: 1.5em;
+  }
+
+  /* --- CTA Button --- */
+
+  .w-cta-btn {
+    display: inline-block;
+    margin-top: 1.5rem;
+    padding: 0.75rem 2rem;
+    background-color: transparent;
+    border: 2px solid var(--color-2);
+    color: var(--color-2);
+    text-decoration: none;
+    font-family: 'Bluemun', sans-serif;
+    font-size: 1rem;
+    letter-spacing: 0.05em;
+    border-radius: 0.25rem;
+    transition: background-color 0.2s ease, color 0.2s ease;
+    position: relative;
+    z-index: 2;
+  }
+
+  .w-cta-btn:hover {
+    background-color: var(--color-2);
+    color: var(--color-5);
   }
 
   :root {
