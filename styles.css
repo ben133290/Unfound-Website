@@ -485,7 +485,6 @@
   /* --- CTA Button --- */
 
   .w-cta-btn {
-    display: inline-block;
     margin-top: 1.5rem;
     padding: 0.75rem 2rem;
     background-color: transparent;
